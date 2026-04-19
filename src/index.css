@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind tailwind utilities;
+
+/* Simon Loos Brand Colors */
+:root {
+  --simon-red: #E31837;
+  --simon-red-dark: #C41530;
+  --simon-black: #1a1a1a;
+  --simon-gray: #6b7280;
+  --simon-gray-light: #f3f4f6;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Tabular nums for counters */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid var(--simon-red);
+  outline-offset: 2px;
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--simon-red);
+  color: white;
+}
